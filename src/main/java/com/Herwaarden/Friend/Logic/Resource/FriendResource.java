@@ -12,21 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 public class FriendResource {
 
     @GetMapping("/private/get/{playerId}")
-    public MyFriendsModel getFriends(@PathVariable("playerId") String playerId){
+    public MyFriendsModel getFriends(@PathVariable("playerId") int playerId){
         MyFriendsModel returnFriendsModel = new MyFriendsModel();
 
         FriendLogic friendLogic = new FriendLogic();
-        returnFriendsModel = friendLogic.getFriendsByCharacterId(1);
+        returnFriendsModel = friendLogic.getFriendsByCharacterId(playerId);
 
         return returnFriendsModel;
     }
 
     @GetMapping("/public/get/{playerId}")
-    public MyFriendsModel getFriendsPublic(@PathVariable("playerId") String playerId){
+    public MyFriendsModel getFriendsPublic(@PathVariable("playerId") int playerId){
         MyFriendsModel returnFriendsModel = new MyFriendsModel();
 
         FriendLogic friendLogic = new FriendLogic();
-        returnFriendsModel = friendLogic.getFriendsByCharacterId(1);
+        returnFriendsModel = friendLogic.getFriendsByCharacterId(playerId);
 
         return returnFriendsModel;
     }

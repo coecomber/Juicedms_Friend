@@ -7,7 +7,6 @@ import com.Herwaarden.Friend.Model.FriendsModel;
 import com.Herwaarden.Friend.Model.MyFriendModel;
 import com.Herwaarden.Friend.Model.MyFriendsModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FriendLogic {
