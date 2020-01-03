@@ -1,27 +1,33 @@
 package com.Herwaarden.Friend.Logic.Resource;
 
-import com.Herwaarden.Friend.Model.FriendModel;
-import com.Herwaarden.Friend.Model.FriendsModel;
+import com.Herwaarden.Friend.Logic.FriendLogic;
+import com.Herwaarden.Friend.Model.MyFriendsModel;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @RestController
-@RequestMapping("/friend")
+@RequestMapping("/api/")
 public class FriendResource {
 
-    @RequestMapping("/get/{playerId}")
-    public FriendsModel getFriends(@PathVariable("playerId") String playerId){
-        FriendsModel friendsModel = new FriendsModel();
+    @GetMapping("/private/get/{playerId}")
+    public MyFriendsModel getFriends(@PathVariable("playerId") String playerId){
+        MyFriendsModel returnFriendsModel = new MyFriendsModel();
 
-        FriendModel friendModel = new FriendModel(7, "Kees");
-        FriendModel friendModel2 = new FriendModel(52, "Jan");
+        FriendLogic friendLogic = new FriendLogic();
+        returnFriendsModel = friendLogic.getFriendsByCharacterId(1);
 
-        friendsModel.addFriendModelListItem(friendModel);
-        friendsModel.addFriendModelListItem(friendModel2);
-        return friendsModel;
+        return returnFriendsModel;
+    }
+
+    @GetMapping("/public/get/{playerId}")
+    public MyFriendsModel getFriendsPublic(@PathVariable("playerId") String playerId){
+        MyFriendsModel returnFriendsModel = new MyFriendsModel();
+
+        FriendLogic friendLogic = new FriendLogic();
+        returnFriendsModel = friendLogic.getFriendsByCharacterId(1);
+
+        return returnFriendsModel;
     }
 }

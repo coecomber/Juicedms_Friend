@@ -2,23 +2,35 @@ package com.Herwaarden.Friend.Model;
 
 public class FriendModel {
 
-    public int friendId;
-    public String friendName;
+    private int friendOneId;
+    private int friendTwoId;
+    private String friendName;
+    private String relationship;
 
     public FriendModel() {
     }
 
-    public FriendModel(int friendId, String friendName){
-        this.friendId = friendId;
+    public FriendModel(int friendOneId, int friendTwoId, String friendName, String relationship){
+        this.friendOneId = friendOneId;
+        this.friendTwoId = friendTwoId;
         this.friendName = friendName;
+        this.relationship = relationship;
     }
 
-    public int getFriendId() {
-        return friendId;
+    public void setFriendOneId(int friendId) {
+        this.friendOneId = friendId;
     }
 
-    public void setFriendId(int friendId) {
-        this.friendId = friendId;
+    public void setFriendTwoId(int friendId) {
+        this.friendTwoId = friendId;
+    }
+
+    public int getFriendOneId() {
+        return friendOneId;
+    }
+
+    public int getFriendTwoId() {
+        return friendTwoId;
     }
 
     public String getFriendName() {
@@ -27,5 +39,13 @@ public class FriendModel {
 
     public void setFriendName(String friendName) {
         this.friendName = friendName;
+    }
+
+    public String getRelationship() {
+        return relationship;
+    }
+
+    public void setRelationship(String relationship) {
+        this.relationship = relationship;
     }
 }
