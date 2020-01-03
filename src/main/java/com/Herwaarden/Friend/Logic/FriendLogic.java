@@ -26,15 +26,17 @@ public class FriendLogic {
 
         //Adds the other user ID to the model we're gonna return so we don't return our own ID.
         for(FriendModel friendModel : friendModelList){
-            MyFriendModel myFriendModel = new MyFriendModel();
-            if (characterId == friendModel.getFriendOneId()){
-                myFriendModel.setFriendId(friendModel.getFriendTwoId());
-            } else {
-                myFriendModel.setFriendId(friendModel.getFriendOneId());
+            if(friendModel.getFriendOneId() == characterId || friendModel.getFriendTwoId() == characterId){
+                MyFriendModel myFriendModel = new MyFriendModel();
+                if (characterId == friendModel.getFriendOneId()){
+                    myFriendModel.setFriendId(friendModel.getFriendTwoId());
+                } else {
+                    myFriendModel.setFriendId(friendModel.getFriendOneId());
+                }
+                myFriendModel.setFriendName(friendModel.getFriendName());
+                myFriendModel.setRelationship(friendModel.getRelationship());
+                myFriendsModel.addFriendModelListItem(myFriendModel);
             }
-            myFriendModel.setFriendName(friendModel.getFriendName());
-            myFriendModel.setRelationship(friendModel.getRelationship());
-            myFriendsModel.addFriendModelListItem(myFriendModel);
         }
 
         return myFriendsModel;
