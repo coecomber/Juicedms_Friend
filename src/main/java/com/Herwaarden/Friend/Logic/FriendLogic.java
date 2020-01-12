@@ -40,4 +40,20 @@ public class FriendLogic {
 
         return myFriendsModel;
     }
+
+    public boolean AddFriend(int userId, int friendId){
+        return friendRepository.AddFriend(userId, friendId);
+    }
+
+    public boolean DeleteFriend(int userId, int friendId){
+        return friendRepository.DeleteFriend(userId, friendId);
+    }
+
+    public boolean AcceptFriend(int userId, int friendId){
+        return friendRepository.AcceptFriend(userId, friendId);
+    }
+
+    public boolean DeclineFriend(int userId, int friendId){
+        return friendRepository.DeclineFriend(userId, friendId);
+    }
 }

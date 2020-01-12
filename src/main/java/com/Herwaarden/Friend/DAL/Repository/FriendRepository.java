@@ -4,9 +4,10 @@ import com.Herwaarden.Friend.DAL.Interface.Context.IFriendContext;
 import com.Herwaarden.Friend.DAL.Interface.Repository.IFriendRepository;
 import com.Herwaarden.Friend.Model.FriendsModel;
 
-import java.util.List;
-
 public class FriendRepository implements IFriendRepository {
+
+    // How to make REST at least level 2:
+    // https://martinfowler.com/articles/richardsonMaturityModel.html#level0
 
     private IFriendContext friendContext;
 

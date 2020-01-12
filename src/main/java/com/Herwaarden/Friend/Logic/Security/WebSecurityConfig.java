@@ -12,8 +12,11 @@ import org.springframework.security.oauth2.jwt.*;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private String audience = "https://DeathrunApi";
-    private String issuer = "https://deathrun.auth0.com/";
+    @Value("${auth0.audience}")
+    private String audience;
+
+    @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
+    private String issuer;
 
     @Override
     public void configure(HttpSecurity http) throws Exception
