@@ -26,7 +26,7 @@ public class FriendContextSQL implements IFriendContext {
         // create our mysql database connection
         try (Connection conn = DriverManager.getConnection(sqlUrl, usernameUrl, passwordUrl))
         {
-            String query = "SELECT * FROM friends";
+            String query = "SELECT * FROM friendstable";
 
             // create the java statement
             try (Statement st = conn.createStatement())
