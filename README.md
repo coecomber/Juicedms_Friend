@@ -2,7 +2,7 @@
  The friend service for my project
 
 
-[![Build Status](https://travis-ci.com/coecomber/Juicedms_Friend.svg)](https://travis-ci.com/coecomber/Juicedms_Friend) ![Build Status](https://img.shields.io/docker/cloud/build/coecomber/juicedms_friend) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=coecomber_Juicedms_Friend&metric=alert_status)](https://sonarcloud.io/dashboard?id=coecomber_Juicedms_Friend) [![codecov](https://codecov.io/gh/coecomber/Juicedms_Friend/branch/master/graph/badge.svg)](https://codecov.io/gh/coecomber/Juicedms_Friend)
+[![Build Status](https://travis-ci.com/coecomber/Juicedms_Friend.svg)](https://travis-ci.com/coecomber/Juicedms_Friend) ![Build Status](https://img.shields.io/docker/cloud/build/coecomber/juicedms_friend) [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=coecomber_Juicedms_Battle&metric=alert_status)](https://sonarcloud.io/dashboard?id=coecomber_Juicedms_Battle) (https://sonarcloud.io/dashboard?id=coecomber_Juicedms_Friend) [![codecov](https://codecov.io/gh/coecomber/Juicedms_Friend/branch/master/graph/badge.svg)](https://codecov.io/gh/coecomber/Juicedms_Friend)
 
 &nbsp;
 
